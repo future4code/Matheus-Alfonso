@@ -90,6 +90,30 @@
         subtrair(numero1, numero2)
         dividir(numero1, numero2)
         multiplicar(numero1, numero2)
-        
 
+// DESAFIO -------------------------------------  
+    //1.
+        //a. -------------------------------------  
+            let imprimeParametro = (parametro) => {
+                console.log(parametro)
+            }
+        //b. -------------------------------------   
+            let somaNumeros = (number1, number2) => {
+                somandoNumeros = number1 + number2
+                imprimeParametro(somandoNumeros)
+            }
 
+        somaNumeros(2, 2)
+
+    //2. -------------------------------------  
+        function teoremaDePitagoras(n1, n2){
+           hipotenusa = Math.sqrt(Math.pow(n1, 2) + Math.pow(n2, 2))
+
+           return hipotenusa
+        }
+
+        let cateto1 = Number(prompt("Digite o primeiro cateto"))
+        let cateto2 = Number(prompt("Digite o segundo cateto"))
+
+        let valorHipotenusa = teoremaDePitagoras(cateto1, cateto2)
+        console.log(valorHipotenusa)

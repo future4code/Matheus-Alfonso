@@ -16,7 +16,17 @@ function retornaNumerosParesElevadosADois(array) {
 }
 
 // EXERCÍCIO 03
+  function retornaNumerosPares(array) {
+    let arraySomentePares = []
 
+    for(i = 0; i < array.length; i++){
+      if(array[i] % 2 === 0){
+        arraySomentePares.push(array[i])
+      }
+    }
+
+    return arraySomentePares
+  }
 
 // EXERCÍCIO 04
 

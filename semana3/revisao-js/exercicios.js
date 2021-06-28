@@ -252,7 +252,14 @@ function verificaParidade(array) {
 
 // EXERCÍCIO 18A
 function retornaPessoasAutorizadas(pessoas) {
+  let arrayPermitidos = []
+  for(i = 0; i < pessoas.length; i++){
+    if((pessoas[i].altura >= 1.5) && (pessoas[i].idade > 14) && (pessoas[i].idade < 60)){
+      arrayPermitidos.push(pessoas[i])
+    } 
+  }
 
+  return arrayPermitidos
 }
 
 // EXERCÍCIO 18B

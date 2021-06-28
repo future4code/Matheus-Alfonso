@@ -88,6 +88,34 @@ function comparaDoisNumeros(num1, num2) {
   //   maiorDivisivelPorMenor: Y,
   //   diferenca: Z
   // }
+  let checaMaiorNumero
+  let checaMenorNumero
+  let checaMaiorDivisivelPorMenor
+
+
+  if(num1 > num2){
+    checaMaiorNumero = num1
+    checaMenorNumero = num2
+  }else{
+    checaMaiorNumero = num2
+    checaMenorNumero = num1
+  }
+
+  if(checaMaiorNumero%checaMenorNumero === 0) {
+    checaMaiorDivisivelPorMenor = true
+  } else{
+    checaMaiorDivisivelPorMenor = false
+  }
+
+  let checaDiferenca = checaMaiorNumero - checaMenorNumero
+
+  let objetoCompara = {
+    maiorNumero: checaMaiorNumero,
+    maiorDivisivelPorMenor: checaMaiorDivisivelPorMenor,
+    diferenca: checaDiferenca
+  }
+
+  return objetoCompara
 }
 
 // EXERCÍCIO 10

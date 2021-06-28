@@ -224,7 +224,13 @@ function multiplicaArrayPor2(array) {
 
 // EXERCÍCIO 17B
 function multiplicaArrayPor2S(array) {
+  for(i = 0; i < array.length; i++){
+    array[i] = array[i] * 2
+  }
 
+  arrayString = array.map(String)
+
+  return arrayString
 }
 
 // EXERCÍCIO 17C

@@ -182,8 +182,23 @@ function anonimizaPessoa(pessoa) {
 }
 
 // EXERCÍCIO 16A
-function maioresDe18(arrayDePessoas) {
+/*[
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]*/
 
+
+function maioresDe18(arrayDePessoas) {
+  let arrayMaiores = []
+  for (i = 0; i < arrayDePessoas.length; i++){
+    if(arrayDePessoas[i].idade >= 18){
+      arrayMaiores.push(arrayDePessoas[i])
+    }
+  }
+
+  return arrayMaiores
 }
 
 // EXERCÍCIO 16B

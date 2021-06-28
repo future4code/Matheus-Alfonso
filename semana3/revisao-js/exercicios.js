@@ -264,7 +264,15 @@ function retornaPessoasAutorizadas(pessoas) {
 
 // EXERCÍCIO 18B
 function retornaPessoasNaoAutorizadas(pessoas) {
+  let arrayNaoPermitidos = []
+  for(i = 0; i < pessoas.length; i++){
+    if((pessoas[i].altura < 1.5) || (pessoas[i].idade <= 14) || (pessoas[i].idade > 60 )){
+      arrayNaoPermitidos.push(pessoas[i])
+    }
 
+  }
+
+  return arrayNaoPermitidos 
 }
 
 // EXERCÍCIO 19A

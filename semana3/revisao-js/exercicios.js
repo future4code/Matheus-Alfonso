@@ -143,7 +143,15 @@ function filmeFavorito() {
 // EXERCÍCIO 13
 function imprimeChamada() {
   // "Venha assistir ao filme NOME_DO_FILME, de ANO, dirigido por DIRECAO e estrelado por ELENCO."
+  let objetoFilmeFavorito = {
+    nome: "O Diabo Veste Prada",
+    ano: 2006,
+    diretor: "David Frankel",
+    atores: ["Meryl Streep", " Anne Hathaway", " Emily Blunt", " Stanley Tucci"]
+  }
 
+  return `Venha assistir ao filme ${objetoFilmeFavorito.nome}, de ${objetoFilmeFavorito.ano}, dirigido por ${objetoFilmeFavorito.diretor} e estrelado por ${objetoFilmeFavorito.atores}.`
+}
 
 // EXERCÍCIO 14
 function criaRetangulo(lado1, lado2) {

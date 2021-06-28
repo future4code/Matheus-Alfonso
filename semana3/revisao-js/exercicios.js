@@ -276,8 +276,21 @@ function retornaPessoasNaoAutorizadas(pessoas) {
 }
 
 // EXERCÍCIO 19A
+
+/*const consultas = [
+  { nome: "João", dataDaConsulta: "01/10/2021" },
+  { nome: "Pedro", dataDaConsulta: "02/07/2021" },
+  { nome: "Paula", dataDaConsulta: "03/11/2021" },
+  { nome: "Márcia",  dataDaConsulta: "04/05/2021" }
+]*/
+
 function ordenaPorNome(consultasNome) {
 
+   let nomes = consultasNome.map((nomeCliente, p) => {
+    return {nome: nomeCliente.nome,
+            dataDaConsulta: nomeCliente.dataDaConsulta}
+   })
+   return nomes.sort()
 }
 
 // EXERCÍCIO 19B

@@ -235,7 +235,19 @@ function multiplicaArrayPor2S(array) {
 
 // EXERCÍCIO 17C
 function verificaParidade(array) {
+  let arrayParImpar = []
 
+  for(i = 0; i < array.length; i++){
+    if(array[i] % 2 === 0){
+      let frasePar = `${array[i]} é par`
+      arrayParImpar.push(frasePar)
+    } else {
+      let fraseImpar = `${array[i]} é ímpar`
+      arrayParImpar.push(fraseImpar)
+    }
+  }
+
+  return arrayParImpar
 }
 
 // EXERCÍCIO 18A

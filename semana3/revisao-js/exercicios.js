@@ -215,7 +215,11 @@ function menoresDe18(arrayDePessoas) {
 
 // EXERCÍCIO 17A
 function multiplicaArrayPor2(array) {
+  for(i = 0; i < array.length; i++){
+    array[i] = array[i] * 2
+  }
 
+  return array
 }
 
 // EXERCÍCIO 17B

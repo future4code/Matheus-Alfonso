@@ -203,7 +203,14 @@ function maioresDe18(arrayDePessoas) {
 
 // EXERCÍCIO 16B
 function menoresDe18(arrayDePessoas) {
+  let arrayMenores = []
+  for (i = 0; i < arrayDePessoas.length; i++){
+    if(arrayDePessoas[i].idade < 18){
+      arrayMenores.push(arrayDePessoas[i])
+    }
+  }
 
+  return arrayMenores
 }
 
 // EXERCÍCIO 17A

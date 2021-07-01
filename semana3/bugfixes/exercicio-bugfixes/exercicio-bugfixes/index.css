@@ -138,3 +138,10 @@ td button {
 #back-button:hover {
     background-color: #635a3d
 }
+
+#inputPesquisa {
+    border-bottom: 1.8px solid black;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}

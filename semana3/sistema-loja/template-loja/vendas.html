@@ -25,10 +25,31 @@
         </header>
     
         <div class = "mainContent">
-            <div>
-                <h1>Bem-vind@ ao <em>nome da loja</em>!</h1>
-                <p>Frase de chamada para sua loja</p>
-            </div>
+            <form action="">
+                <div>
+                    <label for="produtos">Produto</label>
+                    <select id="" name="produtos">
+                      <option value="Roda">Roda</option>
+                      <option value="Roda Usada">Roda Usada</option>
+                      <option value="Pneu">Pneu</option>
+                      <option value="Pneu Usado">Pneu Usado</option>
+                      <option value="Pneu Usado">Parafuso</option>
+                    </select> 
+                </div>
+
+                <div>
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" name="quantidade">                   
+                </div>
+
+                <div>                
+                    <label for="pagamento">Forma de pagamento</label>
+                    <input type="radio" name="pagamento" id="">Débito</input>
+                    <input type="radio" name="pagamento">Crédito</input>
+                </div>                
+
+                <button type="submit">Confirmar</button>
+            </form>
         </div>
     
         <footer class="socialFooter">

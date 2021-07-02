@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+hr {
+    color: white;
+}
+
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: silver;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Navigation */
+
+.navMenu {
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 75px;
+
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+
+    position: fixed;
+}
+
+.navMenu ul {
+    display: flex;
+}
+
+.navMenu li {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+/* Quem sou Eu */
+.quemSouEu {
+
+    height: 700px;
+    background-position: center;
+
+    display: flex;   
+}
+
+.quemSouEuLeft {
+    background-image: url("/assets/images/quemSouEuBanner.jpg");
+    flex: 3;
+}
+
+.cardQuemSouEu {
+    color: white;
+    font-size: 20px;
+
+    
+    background-color: black;
+    opacity: 0.7;
+
+    width: 350px;
+    padding: 30px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.cardQuemSouEu:hover {
+    background-color: black;
+    color: silver;
+}
+
+.quemSouEuInfo {
+    color: white;
+    background-color: black;
+
+    font-size: 20px;
+    line-height: 55px;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items:;
+}
+
+
+
+.socialInfo, .info {
+    margin-top: 100px;
+}
+
+.socialInfo img {
+    width: 100px;
+    margin-left: 20px;  
+}
+
+
+/* Formacao */
+.formacao, .profissional {
+    color: black;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 350px;
+}
+
+/* Profissional */
+.cardFormacao, .cardProfissional {
+    width: 350px;
+    padding: 30px;
+    background-color: white;
+    opacity: 0.9;
+}
+
+/* Skills */
+.skills {
+    background-color:white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.skillsIcons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skillsIcons img {
+    width: 600px;
+}
+
+/* Projetos */
+.projetos {
+    background-color: black;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.projetos h1 {
+    color: white;
+}
+
+.projetoBlackJack img {
+    width: 350px;
+}
+
+.sectionInfoProjeto {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    margin-top: 40px;
+}
+
+.infoProjeto {
+    color: white;
+    background-color: black;
+    width: 400px;
+    line-height: 50px;
+}
+
+.sectionProjeto {
+    height: 100vh;
+    background-color: black;
+}
+
+.fotoProjeto img {
+    width: 800px;
+}
+
+
+/* Contato */
+.contato {
+    background-image: url("/assets/images/quemSouEuBanner.jpg");
+    height: 400px;
+}
+
+.formularioContato {
+    padding: 30px;
+    color: white;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.formularioContato div input {
+    width: 100%;
+    margin-bottom: 20px;
+}

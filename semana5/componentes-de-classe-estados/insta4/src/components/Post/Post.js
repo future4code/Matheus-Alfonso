@@ -10,11 +10,13 @@ import iconeCoracaoPreto from '../../img/favorite.svg'
 //import iconeSalvoPreto from '../../img/salvopreto.svg'
 import iconeSalvoBranco from '../../img/salvobranco.png'
 import iconeSalvoPreto from '../../img/salvopreto.png'
+import iconeCompartilhar from '../../img/compartilhar.png'
 
 
 import iconeComentario from '../../img/comment_icon.svg'
 
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
+import { SecaoCompartilha } from '../SecaoCompartilha/SecaoCompartilha'
 
 
 
@@ -60,6 +62,7 @@ class Post extends React.Component {
     salvo: false,
     numeroCurtidas: 0, //
     comentando: false, //linha 55 - linha 57
+    compartilhando: false,
     numeroComentarios: 0 //linha 61 - linha 65
   }
 
@@ -91,6 +94,12 @@ class Post extends React.Component {
     })
   }
 
+  onClickCompartilhar = () =>{
+    this.setState({
+      compartilhando: !this.state.compartilhando
+    })
+  }
+
   aoEnviarComentario = () => {
     this.setState({
       comentando: false,
@@ -98,6 +107,11 @@ class Post extends React.Component {
     })
   }
 
+aoCompartilhar = () => {
+  this.setState({
+    compartilhando: false
+  })
+}
 
 
 
@@ -129,6 +143,13 @@ class Post extends React.Component {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
 
+    let componenteCompartilhando
+
+    if(this.state.compartilhando) {
+      componenteCompartilhando = <SecaoCompartilha compartilhar={this.aoCompartilhar}/>    
+    }
+
+    
 
 
 
@@ -156,6 +177,11 @@ class Post extends React.Component {
           onClickIcone = {this.onClickSalvo}
         />
 
+        <IconeComContador 
+          icone={iconeCompartilhar}
+          onClickIcone = {this.onClickCompartilhar}
+        />
+
         <IconeComContador
           icone={iconeComentario}
           onClickIcone={this.onClickComentario}
@@ -163,6 +189,7 @@ class Post extends React.Component {
         />
       </PostFooter>
       {componenteComentario}
+      {componenteCompartilhando}
     </PostContainer>
   }
 }

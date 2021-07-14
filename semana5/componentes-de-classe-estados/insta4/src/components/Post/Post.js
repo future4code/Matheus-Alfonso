@@ -6,12 +6,16 @@ import {IconeComContador} from '../IconeComContador/IconeComContador'
 import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
 
-import iconeSalvoBranco from '../../img/salvobranco.svg'
-import iconeSalvoPreto from '../../img/salvopreto.svg'
+//import iconeSalvoBranco from '../../img/salvobranco.svg'
+//import iconeSalvoPreto from '../../img/salvopreto.svg'
+import iconeSalvoBranco from '../../img/salvobranco.png'
+import iconeSalvoPreto from '../../img/salvopreto.png'
+
 
 import iconeComentario from '../../img/comment_icon.svg'
 
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
+
 
 
 
@@ -47,6 +51,9 @@ const PostPhoto = styled.img`
   width: 100%;
 `
 
+
+
+
 class Post extends React.Component {
   state = {
     curtido: false, // linha 71 - linha 75
@@ -55,6 +62,12 @@ class Post extends React.Component {
     comentando: false, //linha 55 - linha 57
     numeroComentarios: 0 //linha 61 - linha 65
   }
+
+
+
+
+
+
 // linha 94
   onClickCurtida = () => {
     console.log('Curtiu!')
@@ -62,6 +75,13 @@ class Post extends React.Component {
       curtido: true,
       numeroCurtidas: this.state.numeroCurtidas + 1
     })
+  }
+
+  onClickSalvo = () => {
+    this.setState({
+      salvo: true
+    })
+    alert("Salvo!")
   }
 
 //Altera o estado inicial da propriedade "comentando". Se for true passa a ser falso e vice-versa
@@ -78,6 +98,13 @@ class Post extends React.Component {
     })
   }
 
+
+
+
+
+
+
+
   render() {
     let iconeCurtida
 
@@ -87,12 +114,27 @@ class Post extends React.Component {
       iconeCurtida = iconeCoracaoBranco
     }
 
+    let iconeSalvo 
+
+    if(this.state.salvo) {
+      iconeSalvo = iconeSalvoPreto
+    } else {
+      iconeSalvo = iconeSalvoBranco
+    }
+
+
     let componenteComentario
 
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
     }
 
+
+
+
+
+
+    
     return <PostContainer>
       <PostHeader>
         <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
@@ -109,7 +151,10 @@ class Post extends React.Component {
           valorContador={this.state.numeroCurtidas} //Mostra o numero de curtidas, vindo do estado do componente - linha 46
         />
 
-
+        <IconeComContador 
+          icone={iconeSalvo}
+          onClickIcone = {this.onClickSalvo}
+        />
 
         <IconeComContador
           icone={iconeComentario}

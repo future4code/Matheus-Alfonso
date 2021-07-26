@@ -67,11 +67,6 @@ class Post extends React.Component {
   }
 
 
-
-
-
-
-// linha 94
   onClickCurtida = () => {
     console.log('Curtiu!')
     this.setState({
@@ -87,7 +82,7 @@ class Post extends React.Component {
     alert("Salvo!")
   }
 
-//Altera o estado inicial da propriedade "comentando". Se for true passa a ser falso e vice-versa
+
   onClickComentario = () => {
     this.setState({
       comentando: !this.state.comentando
@@ -112,13 +107,6 @@ aoCompartilhar = () => {
     compartilhando: false
   })
 }
-
-
-
-
-
-
-
   render() {
     let iconeCurtida
 
@@ -149,13 +137,7 @@ aoCompartilhar = () => {
       componenteCompartilhando = <SecaoCompartilha compartilhar={this.aoCompartilhar}/>    
     }
 
-    
-
-
-
-
-
-    
+  
     return <PostContainer>
       <PostHeader>
         <UserPhoto src={this.props.fotoUsuario} alt={'Imagem do usuario'}/>
@@ -166,11 +148,10 @@ aoCompartilhar = () => {
 
       <PostFooter>
         <IconeComContador
-          icone={iconeCurtida} // Imagem do icone curtida (curtido ou nao) vindo do if da linha 71
-
-          onClickIcone={this.onClickCurtida} //Chama a funçao onClickCurtida e mostra no console que foi curtido - linha 51
-          valorContador={this.state.numeroCurtidas} //Mostra o numero de curtidas, vindo do estado do componente - linha 46
-        />
+          icone={iconeCurtida} 
+          onClickIcone={this.onClickCurtida} 
+          valorContador={this.state.numeroCurtidas} 
+          />
 
         <IconeComContador 
           icone={iconeSalvo}

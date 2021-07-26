@@ -37,21 +37,21 @@ class App extends React.Component {
 
     const listaPosts = this.state.posts.map((post) => {
       return (
-        <MainContainer>
-          <Post
-            {...post.nomeUsuario}
-            {...post.fotoUsuario}
-            {...post.fotoPost}
-          />
-
-        </MainContainer>
+          <div>
+            {post.nomeUsuario}
+            {post.fotoUsuario}
+            {post.fotoPost}
+          </div>
       )
     })
 
     return (
-        <div>
+        <MainContainer>
+           
            {listaPosts}
-           <div>
+           
+
+          <div>
             <input 
               value={this.state.valorInputNome}
               onChange={this.onChangeInputNome}
@@ -69,7 +69,7 @@ class App extends React.Component {
             />
             <button>Publicar</button>
           </div>
-        </div>
+        </MainContainer>
       /*<MainContainer>
         <Post
           nomeUsuario={'paulinha'}

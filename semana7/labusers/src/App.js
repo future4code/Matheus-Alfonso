@@ -22,6 +22,8 @@ export default class App extends React.Component {
     this.setState({pagina:"cadastrar"})
   }
 
+
+
   renderLista = () => {
     this.setState({pagina:"lista"})
   }

@@ -10,7 +10,9 @@ import Tracks from './components/Tracks';
 
 
 const Container = styled.div `
-  background-color: lightgrey;
+  font-family: Brush Script MT, cursive;
+
+  background-color: black;
   border-radius: 20px;
 
   width: 70%;

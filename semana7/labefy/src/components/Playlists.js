@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import axios from 'axios';
 
 const ContainerPlaylist = styled.div ` 
-    background-color: white;
+    background-color: #222326;
     color: grey;
     border-radius: 20px;
     line-height: 35px;
@@ -24,37 +24,51 @@ const CardPlaylist = styled.div `
     justify-content: space-between;
 `
 const ButtonPlaylist = styled.button ` 
-    color: grey;
-    background-color: white;
-    border: grey 1px solid;
+    color: white;
+    background-color: #1db954;
+    border: #1db954 1px solid;
     border-radius: 20px;
 
     width: 100px;
     padding: 5px;
     margin: 23px 0px;
 
+    cursor: pointer;
+
     &:hover {
-        color: white;
-        background-color: lightgrey;
+        color: #1db954;
+        background-color: white;
         border: none;
     }
 `
 const Link = styled.a ` 
     font-size: 12px;
     color: white;
-    background-color: lightgrey;
+    background-color: #1db954;
     text-decoration: none;
-    border: lightgrey 1px solid;
+    border: #1db954 1px solid;
     border-radius: 20px;
-    padding: 3px;
+    padding: 4px;
 
     margin-left: 40px;
 
     &:hover {
-        color: lightgrey;
-        background-color: white;       
+        color: #1db954;
+        background-color: white;    
+        border: none;   
     }
     
+`
+
+const LinkPlayLists = styled.a ` 
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        &:hover {
+        border-left: #1db954 4px outset;
+    }
+    }
 `
 
 export default class Playlists extends React.Component {
@@ -65,7 +79,7 @@ export default class Playlists extends React.Component {
                     <h3>Playlists</h3>
                     <CardPlaylist>
                         <div>
-                            <label>Rock</label>
+                            <label><LinkPlayLists href="#">Rock</LinkPlayLists></label>
                         </div>
                         <div>
                             <Link href="#">Delete</Link>
@@ -73,7 +87,7 @@ export default class Playlists extends React.Component {
                     </CardPlaylist>
                     <CardPlaylist>
                         <div>
-                            <label>Rock</label>
+                            <label><LinkPlayLists href="#">Rock</LinkPlayLists></label>
                         </div>
                         <div>
                             <Link href="#">Delete</Link>
